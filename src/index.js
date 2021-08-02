@@ -1,4 +1,5 @@
 import "./main.css"; 
+import MainImage from "./main-image.jpg";
 
 // create header
 const createHeader = () => {
@@ -44,11 +45,12 @@ const createMainSection = () => {
     const _createRightMainSection = (() => {
         const div = document.createElement("div");
         div.classList.add("main-right");
-        div.innerHTML = `<img 
-            class="heading-image" 
-            src="./imgs/pot-lemons.jpg" 
-            alt="Hot and fresh mussels in the pot.
-        >`;
+        const img = new Image(); 
+        img.classList.add("heading-image"); 
+        img.alt = "Hot and fresh mussels in the pot." 
+        img.src = MainImage; 
+        div.appendChild(img); 
+        
         section.appendChild(div);
     })();
 

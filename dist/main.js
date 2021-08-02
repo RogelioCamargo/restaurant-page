@@ -106,7 +106,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ \"./src/main.css\");\n \n\n// create header\nconst createHeader = () => {\n    const header = document.createElement(\"header\"); \n\n    const _createLogo = (() => {\n        const div = document.createElement(\"div\");\n        div.classList.add(\"menu-logo\");\n        div.textContent = \"FrenchSounding\";\n        header.appendChild(div);\n    })();\n\n    const _createNav = (() => {\n        const nav = document.createElement(\"nav\");\n        nav.classList.add(\"menu-nav\");\n        nav.innerHTML = `<a href=\"#\" class=\"menu-item\">Home</a>\n        <a href=\"#\" class=\"menu-item\">Menu</a>\n        <a href=\"#\" class=\"menu-item\">Contact</a>\n        <a href=\"#\" class=\"ghost-button menu-item-button\">Catering</a>`;\n        header.appendChild(nav);\n    })();\n\n    return header; \n}\n\n// create main section\nconst createMainSection = () => {\n    const section = document.createElement(\"section\"); \n    section.classList.add(\"main\"); \n\n    const _createLeftMainSection = (() => {\n        const div = document.createElement(\"div\"); \n        div.classList.add(\"main-left\"); \n        div.innerHTML = \n            `<div class=\"main-left-wrapper\">\n                <h1 class=\"heading-statement\">Overpriced Food That Tastes Bad!</h1>\n                <a href=\"#\" class=\"ghost-button heading-button\">Menu</a>\n            </div>`;\n\n        section.appendChild(div); \n    })(); \n\n    const _createRightMainSection = (() => {\n        const div = document.createElement(\"div\");\n        div.classList.add(\"main-right\");\n        div.innerHTML = `<img \n            class=\"heading-image\" \n            src=\"./imgs/pot-lemons.jpg\" \n            alt=\"Hot and fresh mussels in the pot.\n        >`;\n        section.appendChild(div);\n    })();\n\n    return section; \n}\n\n\n// create webpage\nconst createWebpage = (() => {\n    const content = document.querySelector(\"#content\"); \n    \n    content.appendChild(createHeader());\n    content.appendChild(createMainSection());  \n})(); \n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ \"./src/main.css\");\n/* harmony import */ var _main_image_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main-image.jpg */ \"./src/main-image.jpg\");\n \n\n\n// create header\nconst createHeader = () => {\n    const header = document.createElement(\"header\"); \n\n    const _createLogo = (() => {\n        const div = document.createElement(\"div\");\n        div.classList.add(\"menu-logo\");\n        div.textContent = \"FrenchSounding\";\n        header.appendChild(div);\n    })();\n\n    const _createNav = (() => {\n        const nav = document.createElement(\"nav\");\n        nav.classList.add(\"menu-nav\");\n        nav.innerHTML = `<a href=\"#\" class=\"menu-item\">Home</a>\n        <a href=\"#\" class=\"menu-item\">Menu</a>\n        <a href=\"#\" class=\"menu-item\">Contact</a>\n        <a href=\"#\" class=\"ghost-button menu-item-button\">Catering</a>`;\n        header.appendChild(nav);\n    })();\n\n    return header; \n}\n\n// create main section\nconst createMainSection = () => {\n    const section = document.createElement(\"section\"); \n    section.classList.add(\"main\"); \n\n    const _createLeftMainSection = (() => {\n        const div = document.createElement(\"div\"); \n        div.classList.add(\"main-left\"); \n        div.innerHTML = \n            `<div class=\"main-left-wrapper\">\n                <h1 class=\"heading-statement\">Overpriced Food That Tastes Bad!</h1>\n                <a href=\"#\" class=\"ghost-button heading-button\">Menu</a>\n            </div>`;\n\n        section.appendChild(div); \n    })(); \n\n    const _createRightMainSection = (() => {\n        const div = document.createElement(\"div\");\n        div.classList.add(\"main-right\");\n        const img = new Image(); \n        img.classList.add(\"heading-image\"); \n        img.alt = \"Hot and fresh mussels in the pot.\" \n        img.src = _main_image_jpg__WEBPACK_IMPORTED_MODULE_1__; \n        div.appendChild(img); \n        \n        section.appendChild(div);\n    })();\n\n    return section; \n}\n\n\n// create webpage\nconst createWebpage = (() => {\n    const content = document.querySelector(\"#content\"); \n    \n    content.appendChild(createHeader());\n    content.appendChild(createMainSection());  \n})(); \n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/main-image.jpg":
+/*!****************************!*\
+  !*** ./src/main-image.jpg ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"7292bcc6ccb82286d44b.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/main-image.jpg?");
 
 /***/ })
 
@@ -161,6 +171,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mai
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -175,6 +197,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mai
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
