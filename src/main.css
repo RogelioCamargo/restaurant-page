@@ -1,4 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
+
+/* @font-face {
+  font-family: 'PoppinsRegular';
+  src: url('./fonts/poppins-regular.woff2') format('woff2'),
+    url('./fonts/poppins-regular.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PoppinsBold';
+  src: url('./fonts/poppins-700.woff2') format('woff2'),
+    url('./fonts/poppins-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+} */
 
 * {
     padding: 0; 
