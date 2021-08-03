@@ -1,8 +1,8 @@
 import MainImage from "../imgs/main-image.jpg"; 
 
 export const createMainSection = () => {
-    const section = document.createElement("section");
-    section.classList.add("main");
+    const container = document.createElement("div");
+    container.classList.add("main");
 
     const _createLeftMainSection = (() => {
         const div = document.createElement("div");
@@ -12,7 +12,7 @@ export const createMainSection = () => {
                 <a href="#" class="ghost-button heading-button">Menu</a>
             </div>`;
 
-        section.appendChild(div);
+        container.appendChild(div);
     })();
 
     const _createRightMainSection = (() => {
@@ -24,8 +24,8 @@ export const createMainSection = () => {
         img.src = MainImage; 
         div.appendChild(img);
 
-        section.appendChild(div);
+        container.appendChild(div);
     })();
 
-    return section;
+    return container;
 };

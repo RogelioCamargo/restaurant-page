@@ -113,3 +113,16 @@ header {
     width: 100%;
 }
 
+/* MENU */
+.menu-article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.menu-row {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto 60px auto; 
+}

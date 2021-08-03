@@ -1,7 +1,7 @@
 import "./main.css"; 
-import { createHeader } from "./modules/createHeader"; 
-import { createMainSection } from "./modules/createMainSection";
-import { createMenuSection } from "./modules/createMenuSection"; 
+import { createHeader } from "./app/createHeader"; 
+import { createMainSection } from "./app/createMainSection";
+import { createMenuSection } from "./app/createMenuSection"; 
 
 
 // create webpage
@@ -10,4 +10,5 @@ const createWebpage = (() => {
     
     content.appendChild(createHeader());
     // content.appendChild(createMainSection());  
+    content.appendChild(createMenuSection()); 
 })(); 
