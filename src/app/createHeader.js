@@ -22,8 +22,8 @@ export const createHeader = () => {
     const navOptions = header.querySelectorAll(".nav-option"); 
     navOptions.forEach(option => {
         option.addEventListener("click", () => {
-            console.log(option.textContent.toLowerCase());
-            // createWebpage(option.textContent.toLowerCase()); 
+            const page = option.textContent.toLowerCase(); 
+            createWebpage(page); 
         }); 
     }); 
 
