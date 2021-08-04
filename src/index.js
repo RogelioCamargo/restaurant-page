@@ -5,10 +5,14 @@ import { createMenuSection } from "./app/createMenuSection";
 
 
 // create webpage
-const createWebpage = (() => {
+export const createWebpage = ((contentType) => {
     const content = document.querySelector("#content"); 
-    
+    content.innerHTML = ""; 
+
     content.appendChild(createHeader());
-    // content.appendChild(createMainSection());  
-    content.appendChild(createMenuSection()); 
-})(); 
+
+    if (contentType === "home") 
+        content.appendChild(createMainSection());  
+    else if (contentType === "menu")
+        content.appendChild(createMenuSection()); 
+})("home"); 
