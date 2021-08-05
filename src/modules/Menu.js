@@ -2,7 +2,6 @@ import BackgroundImage from "../imgs/background.png";
 import MenuMiddleImage from "../imgs/menu-7.jpg";
 import { dishes1, dishes2, entrees1, entrees2 } from "./menuItems"; 
 
-
 export const Menu = (() => {
     const container = document.createElement("div"); 
     container.classList.add("menu"); 
@@ -49,7 +48,7 @@ export const Menu = (() => {
     } 
 
     const create = () => {
-        const content = document.querySelector("#content");
+        container.innerHTML = ""; 
 
         _createSectionHeader("Midyeler"); 
         _createMenuSection(dishes1); 
@@ -65,7 +64,7 @@ export const Menu = (() => {
         _createMenuSection(entrees1);
         _createMenuSection(entrees2);
 
-        content.appendChild(container);  
+        return container; 
     }
 
     return { create }; 

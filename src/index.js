@@ -1,5 +1,5 @@
 import "./main.css"; 
-import { createHeader } from "./modules/createHeader"; 
+import { Header } from "./modules/Header"; 
 import { Main } from "./modules/Main";
 import { Menu } from "./modules/Menu"; 
 
@@ -9,12 +9,11 @@ export const createWebpage = (contentType) => {
     const content = document.querySelector("#content"); 
     content.innerHTML = ""; 
 
-    content.appendChild(createHeader());
-
+    content.appendChild(Header.create()); 
     if (contentType === "home") 
-        Main.create();  
+        content.appendChild(Main.create());  
     else if (contentType === "menu")
-        Menu.create(); 
+        content.appendChild(Menu.create()); 
 }; 
 
 createWebpage("home"); 

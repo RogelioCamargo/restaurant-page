@@ -28,10 +28,10 @@ export const Main = (() => {
     }; 
 
     const create = () => {
-        const content = document.querySelector("#content"); 
+        container.innerHTML = ""; 
         _createLeftMainSection(); 
         _createRightMainSection(); 
-        content.appendChild(container); 
+        return container; 
     }; 
 
     return { create }; 
