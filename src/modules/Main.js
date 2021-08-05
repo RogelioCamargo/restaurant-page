@@ -1,10 +1,10 @@
 import MainImage from "../imgs/main-image.jpg"; 
 
-export const createMainSection = () => {
+export const Main = (() => {
     const container = document.createElement("div");
     container.classList.add("main");
 
-    const _createLeftMainSection = (() => {
+    const _createLeftMainSection = () => {
         const div = document.createElement("div");
         div.classList.add("main-left");
         div.innerHTML = `<div class="main-left-wrapper">
@@ -13,9 +13,9 @@ export const createMainSection = () => {
             </div>`;
 
         container.appendChild(div);
-    })();
+    }; 
 
-    const _createRightMainSection = (() => {
+    const _createRightMainSection = () => {
         const div = document.createElement("div");
         div.classList.add("main-right");
         const img = new Image();
@@ -25,7 +25,14 @@ export const createMainSection = () => {
         div.appendChild(img);
 
         container.appendChild(div);
-    })();
+    }; 
 
-    return container;
-};
+    const create = () => {
+        const content = document.querySelector("#content"); 
+        _createLeftMainSection(); 
+        _createRightMainSection(); 
+        content.appendChild(container); 
+    }; 
+
+    return { create }; 
+})();

@@ -1,7 +1,7 @@
 import "./main.css"; 
-import { createHeader } from "./app/createHeader"; 
-import { createMainSection } from "./app/createMainSection";
-import { createMenuSection } from "./app/createMenuSection"; 
+import { createHeader } from "./modules/createHeader"; 
+import { Main } from "./modules/Main";
+import { Menu } from "./modules/Menu"; 
 
 
 // create webpage
@@ -12,9 +12,9 @@ export const createWebpage = (contentType) => {
     content.appendChild(createHeader());
 
     if (contentType === "home") 
-        content.appendChild(createMainSection());  
+        Main.create();  
     else if (contentType === "menu")
-        content.appendChild(createMenuSection()); 
+        Menu.create(); 
 }; 
 
 createWebpage("home"); 

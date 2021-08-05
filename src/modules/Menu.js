@@ -3,7 +3,7 @@ import MenuMiddleImage from "../imgs/menu-7.jpg";
 import { dishes1, dishes2, entrees1, entrees2 } from "./menuItems"; 
 
 
-export const createMenuSection = () => {
+export const Menu = (() => {
     const container = document.createElement("div"); 
     container.classList.add("menu"); 
     container.setAttribute("style", `background-image: url(${BackgroundImage})`);  
@@ -48,19 +48,25 @@ export const createMenuSection = () => {
         container.appendChild(header);
     } 
 
-    _createSectionHeader("Midyeler"); 
-    _createMenuSection(dishes1); 
-    _createMenuSection(dishes2); 
+    const create = () => {
+        const content = document.querySelector("#content");
 
-    const middleSectionImage = new Image(); 
-    middleSectionImage.classList.add("menu-mid-image"); 
-    middleSectionImage.src = MenuMiddleImage; 
-    middleSectionImage.alt = "A plate full of mussels."; 
-    container.appendChild(middleSectionImage); 
+        _createSectionHeader("Midyeler"); 
+        _createMenuSection(dishes1); 
+        _createMenuSection(dishes2); 
 
-    _createSectionHeader("Diğer Ürünler"); 
-    _createMenuSection(entrees1);
-    _createMenuSection(entrees2); 
+        const middleSectionImage = new Image(); 
+        middleSectionImage.classList.add("menu-mid-image"); 
+        middleSectionImage.src = MenuMiddleImage; 
+        middleSectionImage.alt = "A plate full of mussels."; 
+        container.appendChild(middleSectionImage); 
 
-    return container; 
-}
+        _createSectionHeader("Diğer Ürünler"); 
+        _createMenuSection(entrees1);
+        _createMenuSection(entrees2);
+
+        content.appendChild(container);  
+    }
+
+    return { create }; 
+})(); 
